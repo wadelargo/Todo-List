@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To DO List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #3dcbe4;
+  height: 130vh;
+}
+
+.app {
+  width: 60%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgb(136, 231, 11);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 90%;
+  }
+}
+
+.app h1 {
+  color: #fff;
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(to right, #99fa61, #f840f8, #1f6577);
+}
+
+.app form {
+  display: flex;
+  width: 100%;
+}
+
+.app form input {
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 18px;
+  color: #2e301e;
+  padding: 19px;
+  width: 90%;
+}
+
+.app form button {
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(to right, #ab26f8, #814fc2);
+  font-size: 25px;
+  font-weight: 600;
+  height: 60px;
+  width: 15%;
+  cursor: pointer;
+}
+
+.app ul {
+  list-style: none;
+  color: #90a2f1;
+  padding: 0;
+}
+
+.app ul li {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  background: linear-gradient(to right, #f8f2f2, #f0ebeb);
+}
+
+.check {
+  width: 0.9em;
+  height: 0.9em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #868282;
+  border: 1px solid #696565;
+}
+
+.check:checked {
+  background-color: #b13151;
+  border: 1px solid #1dd2af;
+}
+
+.task {
+  font-size: 18px;
+  padding: 0 10px;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  color: #333;
+}
+
+.task:focus {
+  outline: none;
+}
+
+.app ul li i {
+  float: right;
+  cursor: pointer;
+  color: #888;
+}
+
+.app ul li i:hover {
+  color: #4bd5f8;
+}
+
+.completed {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="app">
+      <h1>MY TODO LIST IS VERY HANDSOME</h1>
+      <form>
+        <input type="text" placeholder="Add new task...">
+        <button type="submit">&plus;</button>
+      </form>
+      <ul></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html
